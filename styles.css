@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('pictures/background.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    font-family: 'Press Start 2P', sans-serif;
+    flex-direction: column;
+	font-size: 20px; /* Increased font size */
+	user-select: none;
+}
+
+#submitAnswer {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#overlay {
+    text-align: center;
+}
+
+#playButton {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 30px;
+	width: 250px;
+	margin-top: 50px;
+	height: 150px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+#content {
+    text-align: center;
+}
+
+#kayoContainer {
+	margin-top: 50px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+#kayoGifPlay {
+	margin-top: 10px;
+    width: 150px;
+    image-rendering: pixelated; /* Prevent blurriness for pixel art */
+	margin-bottom: 50px;
+}
+
+#kayoText {
+	display: none;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    margin-left: 10px; /* Adjust as needed */
+    font-size: 14px; /* Adjust as needed */
+    color: white; /* Adjust as needed */
+}
+
+.small-text {
+    font-size: 12px; /* Adjust the font size as desired */
+}
+
+@keyframes moveUpRight {
+    0% {
+        transform: translate(0, -30px);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(5px, -50px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(5px, -50px);
+        opacity: 0;
+    }
+}
+
+#kayoText.animate {
+    animation: moveUpRight 1s forwards;
+}
+
+#equationContainer, #numberInputContainer {
+    font-family: 'Press Start 2P', sans-serif;
+    margin-top: 20px;
+}
+
+#answerInput, #numberInput {
+    font-family: 'Press Start 2P', sans-serif;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#answerInput.shake {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+.random-gif {
+	margin-top: 10px;
+    max-width: 500px; /* Adjust as needed */
+    max-height: 300px; /* Adjust as needed */
+}
